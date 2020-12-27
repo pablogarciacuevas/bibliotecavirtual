@@ -1,0 +1,31 @@
+parameter Pablo
+
+define("base_url", "http://localhost/BibliotecaVirtual/");
+define("controller_default","HomeController");
+define("action_default","index");
+
+config Pablo
+
+class Database{
+    static public function connect(){
+        $db = new mysqli('localhost','root','','bibliotecavirtual');
+        $db->query("SET NAMES 'utf-8'");
+
+        return $db;
+    }
+}
+
+htaccess 
+
+<IfModule mod_rewrite.c>
+    #Activar rewrite
+    RewriteEngine on
+    ErrorDocument 404 http://localhost/BibliotecaVirtual/error/
+
+    RewriteCond  %{SCRIPT_FILENAME} !-d
+    RewriteCond  %{SCRIPT_FILENAME} !-f
+
+    #RewriteRule ^/?([a-zA-Z]+)/([a-zA-Z]+) index.php?controller=$1&action=$2&$3
+    RewriteRule ^(.*)/(.*) index.php?controller=$1&action=$2
+    
+</IfModule>

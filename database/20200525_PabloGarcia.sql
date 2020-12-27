@@ -1,0 +1,1 @@
+ALTER TABLE empresa MODIFY id_usuario int null;
