@@ -1,1 +1,0 @@
-alter table empresa add director varchar(255);
