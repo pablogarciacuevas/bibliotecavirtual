@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Este es el cuerpo</h1>
+    <h1>Este es el cuerpo, Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final</h1>
 </body>
 </html>
